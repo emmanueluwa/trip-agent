@@ -1,6 +1,6 @@
 # Trip planning agent
 
-## Planning a trip usually involves ju,ping between multiple websites, let's use ai to simplify the process
+### Planning a trip usually involves jumping between multiple websites, let's use ai to simplify the process
 
 ## Multiple agents will be used
 
@@ -19,3 +19,23 @@
 - LangGraph
 - MCP
 - postgreSQL
+
+## How to run the app
+
+1. create the virtual env
+
+```bash
+conda create -n trip python=3.11 -y
+```
+
+2. activate env
+
+```bash
+conda activate trip
+```
+
+3. install requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
