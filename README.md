@@ -1,6 +1,8 @@
 # Trip planning agent
 
-### Planning a trip usually involves jumping between multiple websites, let's use ai to simplify the process
+### What is this?
+
+Planning a trip usually involves jumping between multiple websites, let's use ai to simplify the process
 
 ## Multiple agents will be used
 
@@ -12,13 +14,52 @@
 ## Languages
 
 - python
+- html
+- css
 
 ## Tools
 
 - llms (Large Langauge Models)
 - LangGraph
+- Langchain
 - MCP
 - postgreSQL
+- FastAPI
+- Tavily API
+- AviationStack API
+
+## Workflow
+
+1. The user submits a travel request.
+2. The flight agent gathers flight-related information.
+3. The hotel agent searches for accommodation suggestions.
+4. The itinerary agent creates a practical travel plan.
+5. The final agent formats the result into a polished response.
+
+## Project Structure
+
+```text
+.
+├── app.py                # FastAPI app entry point
+├── backend.py            # LangGraph travel workflow
+├── requirements.txt      # Python dependencies
+├── static/               # Static frontend assets
+├── templates/            # HTML templates
+└── tools/                # Flight and web search integrations
+```
+
+## Environment Variables
+
+Create a .env file in the project root with the following variables:
+use .example.env as reference
+
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/travel_db
+GROQ_API_KEY=your_groq_api_key
+AVIATIONSTACK_API_KEY=your_aviationstack_api_key
+TAVILY_API_KEY=your_tavily_api_key
+DEFAULT_ORIGIN_IATA=DAC
+```
 
 ## How to run the app
 
@@ -38,4 +79,16 @@ conda activate trip
 
 ```bash
 pip install -r requirements.txt
+```
+
+4. Start the FastAPI server:
+
+```bash
+python app.py
+```
+
+5. Then open your browser at:
+
+```text
+http://127.0.0.1:8000/
 ```
