@@ -8,6 +8,7 @@ Planning a trip usually involves jumping between multiple websites, let's use ai
 
 - flight search agent (Aviation stack API)
 - hotel research agent (Tavily Search)
+- weather agent (Custom Weather MCP)
 - itinerary planning agent (Tavily Search)
 - final response agent (Groq llm(llama3))
 

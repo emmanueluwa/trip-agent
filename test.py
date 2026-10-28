@@ -1,21 +1,10 @@
-from tools.tavily_tool import tavily_search
-from tools.flight_tool import search_flights
-from backend import run_travel_agent
-
-# response = tavily_search("Best hotels in London")
-
-# print(response)
+import asyncio
+from mcp_client_test import get_all_tools
 
 
-# response = search_flights("Plan a 7 days Japan trip from London")
-
-# print(response)
-
-user_input = input("Enter trip idea: ")
+async def main():
+    await get_all_tools()
 
 
-response = run_travel_agent(user_input=user_input, thread_id="test_user")
-
-print("\n\nFinal Trip Suggestion:\n\n")
-
-print(response["answer"])
+if __name__ == "__main__":
+    asyncio.run(get_all_tools())
